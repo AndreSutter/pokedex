@@ -1,0 +1,483 @@
+
+@font-face {
+    font-family: 'Bangers-Regular';
+    src: url(./font/Bangers-Regular.ttf);
+}
+
+body {
+    margin: 0;
+    font-family: 'Bangers-Regular';
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/*--header starts */
+header {
+    display: flex;
+    background-color: rgb(19, 68, 89);
+    width: 100%;
+    height: 120px;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10 32px;
+}
+
+.pokedex {
+    padding-left:25px;
+    display:flex;
+    align-items:center;
+}
+
+.pokedex img {
+    height:64px;
+    width:64px;
+}
+
+h1 {
+    color:white;
+}
+
+.headertitle {
+    display: flex;
+    display:block;
+    justify-content: center;
+    padding-left:10px;
+    align-self: center;
+    color: white;
+    font-family: 'Bangers-Regular';
+    font-size:40px;
+    letter-spacing:4px;
+}
+
+.searchfield{
+    display:flex;
+    padding-right:32px;
+}
+
+.searchfield input {
+    padding: 8px 12px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-family: 'Bangers-Regular';
+    color:#2f93bd;
+    outline:none;
+}
+
+.searchfield ::placeholder {
+    color: #2f93bd;
+}
+
+/*--header ends--*/
+
+/*--Maincontainer start--*/
+
+.mainContainer {
+    padding: 20px; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh; 
+    background-color: rgb(5, 23, 30); 
+}
+
+.content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: stretch;
+}
+
+.pokemonCard {
+    height:270px;
+    width:200px;
+    border-radius:8px;
+    background: radial-gradient(circle, rgb(255, 217, 0) 0%, white 180%); /* Radialer Verlauf */
+    margin:20px;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    border:6px solid rgb(236,199,55);
+}
+
+.pokemonCard:hover{
+    cursor:pointer;
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+}
+
+.pokemonTitle{
+    font-family: 'Bangers-Regular';
+    text-align:center;
+    color:black;
+    letter-spacing:1px;
+    margin-bottom:-10px;
+}
+
+.pokemonImage {
+    width: calc(75% + 22px); /* Beispiel: Breite auf 100% + 20px setzen */
+    height:150px;
+    margin: 0 -10px; /* Negative Margins, um die zusätzliche Breite auszugleichen */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pokemon-img {
+    height:120px;
+    width:120px;
+    filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.8));
+}
+
+.pokemonTypes {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px; 
+}
+
+.pokemonType {
+    font-family: 'Bangers-Regular';
+    font-weight:700;
+    letter-spacing:1px;
+    color: black;
+    padding: 5px 10px;
+    border-radius: 8px;
+    margin: 8px 0px; 
+}
+
+.pokemonType {
+    background-color: transparent !important; 
+    border:transparent !important;
+    box-shadow:none !important;
+}
+
+.pokemonTitle small {
+    font-size: 14px; 
+}
+
+/*--Maincontainer ends--*/
+
+/*--Pokemon Laden--*/
+.loadMore {
+    text-align: center;
+}
+
+.loadMore button {
+    padding: 10px 20px; 
+    font-size: 24px; 
+    font-family: 'Bangers-Regular';
+    letter-spacing:1px;
+    background-color: rgb(19, 68, 89);
+    color: white; 
+    border: 2px solid white; 
+    border-radius: 8px; 
+    cursor: pointer; 
+    margin-top:20px;
+    margin-bottom:40px;
+}
+
+.loadMore button:hover {
+    background-color: #237ca3; 
+}
+
+/*--Pokemon Laden fertig--*/
+
+/*--Grosse Pokemonkarten anfang--*/
+
+.bigPokeCardContainer {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.75);
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+}
+
+.bigPokeCardContainer.active {
+    display: flex;
+}
+
+.bigPokeCard {
+    background: radial-gradient(circle, rgb(255, 217, 0) 0%, white 180%);
+    border:6px solid rgb(236,199,55);
+    border-radius: 12px;
+    padding: 24px;
+    position: relative;
+}
+
+.bigPokeCard img {
+    width:250px;
+    height:250px;
+}
+
+.pokeNumber {
+    font-size: 24px;
+    position: relative;
+    font-weight: normal;
+    top: -26px;
+    display: flex;
+    justify-content: center;
+}
+
+.bigCardPokeName {
+    font-size: 40px;
+    font-weight: bold;
+    text-align: center;
+    padding: 14px;
+}
+
+.bigCardPokeInfo {
+    margin-top:20px;
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.bigCardPokeInfoText {
+    font-size: 16px;
+    font-weight: 500;
+    text-align: center;
+}
+
+.closeBtn {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    font-size: 24px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.infoLine {
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+.infoLine img {
+    width: 24px; 
+    height: auto;
+    margin-right: 5px;
+}
+
+.buttonContainer {
+    display: flex;
+    justify-content: space-around;
+    margin: 20px 0;
+}
+
+.buttonContainer button {
+    padding: 12px 18px;
+    font-size: 16px;
+    font-family: 'Bangers-Regular';
+    background-color: rgb(19, 68, 89);
+    color: white;
+    border: 2px solid white;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.buttonContainer button:hover {
+    background-color: #237ca3;
+}
+
+.bigCardPokeContent {
+    margin-top: 20px;
+    font-size: 24px;
+    text-align: center;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+/* Styling for navigation arrows begin*/
+.navArrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 36px;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    cursor: pointer;
+    z-index: 1001;
+}
+
+.navArrow.left {
+    left: 10px;
+}
+
+.navArrow.right {
+    right: 10px;
+}
+
+.navArrow:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Styling for navigation arrows end*/
+
+/* Media start max-width*/
+
+@media (max-width: 480px) {
+    .headertitle {
+        display: none;
+    }
+
+    .bigPokeCard {
+        padding:14px;
+    }
+
+    .bigCardPokeName {
+        font-size:32px;
+    }
+
+    .pokeNumber {
+        font-size:20px;
+    }
+
+    .bigPokeCard img {
+        width: 200px;
+        height: 200px;
+    }
+
+    .infoLine img {
+        width: 20px;
+        height: auto;
+        margin-right: 5px;
+    }
+
+    .bigCardPokeContent {
+        font-size: 20px;
+        height: 120px;   
+}
+
+.buttonContainer button {
+    padding: 10px 12px;
+}
+
+.closeBtn {
+    top: 0px;
+    font-size: 20px;
+}
+
+.navArrow.right {
+    right: 4px;
+}
+
+.navArrow.left {
+    left: 4px;
+}
+
+.navArrow {
+    font-size: 30px;
+    padding: 7px;
+}
+
+}
+
+@media (min-width: 1800px) {
+    .searchfield {
+        padding-right:80px;
+    }
+
+    .pokedex {
+        padding-left:80px;
+}
+
+}
+
+/* Media end max-width*/
+
+/* Lade-Spinner */
+/* Remove the old spinner CSS */
+.spinner {
+    display: none; 
+}
+
+/* Add the new Pokéball loader CSS */
+.ball-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: black;
+    z-index: 1000;
+}
+
+.ball {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background: white;
+    position: relative;
+    box-shadow: -20px 0 rgba(0, 0, 0, 0.1) inset;
+    animation: roll 1s ease-in-out infinite;
+    background: linear-gradient(
+        to bottom,
+        #e83e35 0%,
+        #e83e35 50.5%,
+        #ffffff 50.51%,
+        #ffffff 100%
+    );
+}
+
+.ball:after {
+    content: "";
+    position: absolute;
+    top: calc(100px - 3px);
+    left: 0;
+    width: 200px;
+    height: 6px;
+    background: #3f3f3f;
+}
+
+.ball:before {
+    content: "";
+    position: absolute;
+    top: 67px;
+    left: 67px;
+    width: 54px;
+    height: 54px;
+    border: solid 6px #3f3f3f;
+    border-radius: 50%;
+    background: white;
+    z-index: 1;
+    box-shadow: 0 0 15px -2px #c62828 inset;
+    animation: button 3s ease infinite;
+}
+
+@keyframes roll {
+    from {
+        transform: rotate(0);
+    }
+    90%,
+    to {
+        transform: rotate(720deg);
+    }
+}
+
+@keyframes button {
+    from,
+    50%,
+    to {
+        box-shadow: 0 0 15px -2px #c62828 inset;
+    }
+
+    25%,
+    75% {
+        box-shadow: 0 0 10px -2px #1300ea inset;
+    }
+}

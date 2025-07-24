@@ -1,0 +1,89 @@
+.grass {
+    background-color:rgb(33, 149, 10);
+    border:3px solid rgb(236,199,55);
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 1);
+}
+
+.fire {
+    background-color: #f04d30;
+    border:3px solid rgb(236,199,55);
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 1);
+}
+
+.water {
+    background-color: #6890F0;
+    border:3px solid rgb(236,199,55);
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 1); 
+}
+
+.bug {
+    background-color: olive;
+    border:3px solid rgb(236,199,55);
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 1); 
+}
+
+.normal {
+    background-color: #6b8e23;
+    border:3px solid rgb(236,199,55);
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 1); 
+}
+
+.poison {
+    background-color: rgb(146, 35, 146);
+    border:3px solid rgb(236,199,55);
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 1); 
+}
+
+.electric {
+    background-color: rgb(247, 233, 41);
+    border:3px solid rgb(236,199,55);
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 1); 
+}
+
+.ground {
+    background-color: rgb(129, 117, 62);
+    border:3px solid rgb(236,199,55);
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 1); 
+}
+
+.fairy {
+    background-color: rgb(221, 161, 213);
+    border:3px solid rgb(236,199,55);
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 1);  
+}
+
+.fighting {
+    background-color: rgb(231, 110, 39);
+    border:3px solid rgb(236,199,55);
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 1);   
+}
+
+.psychic {
+    background-color: rgb(171, 69, 230);
+    border:3px solid rgb(236,199,55);
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 1);   
+}
+
+.rock {
+    background-color: rgb(233, 150, 94);
+    border:3px solid rgb(236,199,55);
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 1);  
+}
+
+.ghost {
+    background-color: rgb(59, 110, 145);
+    border:3px solid rgb(236,199,55);
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 1);  
+}
+
+.ice {
+    background-color: rgb(64, 203, 238);
+    border:3px solid rgb(236,199,55);
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 1);  
+}
+
+.dragon {
+    background-color: rgb(170, 181, 184);
+    border:3px solid rgb(236,199,55);
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 1);  
+}

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokédex</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="color.css">
+    <script src="script.js" defer></script>
+    <link rel="icon" href="./img/pokeball.png">
+</head>
+
+<body onload="render()">
+    <header>
+        <div class="pokedex">
+            <img src="./img/pokemon.png" alt="Pokémon Logo">
+            <h1 class="headertitle">Pokédex</h1>
+        </div>
+        <div class="searchfield">
+            <input type="search" id="searchInput" placeholder="Search Pokémon...">
+        </div>
+    </header>
+
+    <div class="mainContainer">
+        <div id="pokeLoader" class="ball-container">
+            <div class="ball"></div>
+        </div>
+        <section class="content" id="content"></section>
+
+        <div class="loadMore">
+            <button onclick="loadMorePokemons()">Load More Pokemons</button>
+        </div>
+
+        <div id="openPokemonCard" class="bigPokeCardContainer">
+            <div class="navArrow left" onclick="previousCard()">&#10094;</div>
+            <div class="bigPokeCard" id="bigPokeCard">
+                <div class="bigPokeCardBg">
+                    <button class="closeBtn" onclick="closeCard()">X</button>
+                    <div class="bigCardPokeName" id="bigCardPokeName"></div>
+                    <div class="bigPokeCardImg">
+                        <img id="bigCardPokeImg" src="" alt="">
+                    </div>
+                </div>
+                <div class="buttonContainer">
+                    <button onclick="showInfo()">Info</button>
+                    <button onclick="showStats()">Stats</button>
+                    <button onclick="showEvolution()">Evolution</button>
+                </div>
+                <div class="bigCardPokeContent" id="bigCardPokeContent"></div>
+            </div>
+            <div class="navArrow right" onclick="nextCard()">&#10095;</div>
+        </div>
+</body>
+
+</html>
+
